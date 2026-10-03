@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Персональна сторінка та Каталог відеоігор - Владислав Чесной</title>
+</head>
+<body>
+
+<header id="main-header">
+    <!-- Головне зображення профілю з високим пріоритетом завантаження -->
+    <img src="profile-placeholder.jpg" alt="Фото Владислава Чесного" fetchpriority="high" width="150" height="150">
+    <h1>Владислав Чесной</h1>
+    <p>Студент Сумського державного університету (спеціальність "Інформатика"). Цікавлюся веброзробкою, програмуванням та відеоіграми.</p>
+    <nav>
+        <ul>
+            <li><a href="#about">Про мене</a></li>
+            <li><a href="#catalog">Каталог відеоігор</a></li>
+            <li><a href="#contacts">Контакти</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main>
+    <article id="about">
+        <h2>Про мене</h2>
+        <p>Навчаюся на факультеті електроніки та інформаційних технологій. Маю диплом молодшого бакалавра з комп'ютерної інженерії (СФК НУХТ). Працюю з C++, C#, Java, Python, SQL та технологіями вебдизайну.</p>
+    </article>
+
+    <section id="filters">
+        <h2>Фільтр каталогу</h2>
+        <form action="#" method="GET">
+            <label for="genre-filter">Жанр:</label>
+            <select id="genre-filter" name="genre">
+                <option value="all">Всі жанри</option>
+                <option value="rpg">RPG</option>
+                <option value="shooter">Шутер</option>
+                <option value="sandbox">Пісочниця</option>
+                <option value="puzzle">Головоломка</option>
+            </select>
+            <button type="submit">Застосувати</button>
+        </form>
+    </section>
+
+    <section id="catalog">
+        <h2>Каталог відеоігор</h2>
+        <ul class="game-list">
+            <!-- Картка 1 -->
+            <li>
+                <article class="game-card">
+                    <h3>The Witcher 3: Wild Hunt</h3>
+                    <img src="witcher3-small.jpg" 
+                         srcset="witcher3-small.jpg 400w, witcher3-large.jpg 800w" 
+                         sizes="(max-width: 600px) 400px, 800px" 
+                         alt="Обкладинка гри The Witcher 3: Wild Hunt" 
+                         loading="lazy"
+                         class="game-cover">
+                    <p><strong>Жанр:</strong> <span class="category">RPG</span></p>
+                    <p><strong>Рік випуску:</strong> <time datetime="2015-05-19">2015</time></p>
+                    <p><strong>Час проходження (год):</strong> <data value="100">100</data></p>
+                    <p><strong>Опис:</strong> Епічна рольова гра про відьмака Ґеральта з Рівії.</p>
+                    <p>
+                        <input type="checkbox" id="completed-1" checked disabled>
+                        <label for="completed-1">Пройдено</label>
+                    </p>
+                </article>
+            </li>
+            <!-- Картка 2 -->
+            <li>
+                <article class="game-card">
+                    <h3>Cyberpunk 2077</h3>
+                    <img src="cyberpunk-small.jpg" 
+                         srcset="cyberpunk-small.jpg 400w, cyberpunk-large.jpg 800w" 
+                         sizes="(max-width: 600px) 400px, 800px" 
+                         alt="Обкладинка гри Cyberpunk 2077" 
+                         loading="lazy"
+                         class="game-cover">
+                    <p><strong>Жанр:</strong> <span class="category">Action/RPG</span></p>
+                    <p><strong>Рік випуску:</strong> <time datetime="2020-12-10">2020</time></p>
+                    <p><strong>Час проходження (год):</strong> <data value="60">60</data></p>
+                    <p><strong>Опис:</strong> Пригодницька рольова гра у відкритому світі мегаполіса Найт-Сіті.</p>
+                    <p>
+                        <input type="checkbox" id="completed-2" checked disabled>
+                        <label for="completed-2">Пройдено</label>
+                    </p>
+                </article>
+            </li>
+            <!-- Картка 3 -->
+            <li>
+                <article class="game-card">
+                    <h3>Minecraft</h3>
+                    <img src="minecraft-small.jpg" 
+                         srcset="minecraft-small.jpg 400w, minecraft-large.jpg 800w" 
+                         sizes="(max-width: 600px) 400px, 800px" 
+                         alt="Обкладинка гри Minecraft" 
+                         loading="lazy"
+                         class="game-cover">
+                    <p><strong>Жанр:</strong> <span class="category">Пісочниця</span></p>
+                    <p><strong>Рік випуску:</strong> <time datetime="2011-11-18">2011</time></p>
+                    <p><strong>Час проходження (год):</strong> <data value="500">500+</data></p>
+                    <p><strong>Опис:</strong> Гра-пісочниця, яка дозволяє будувати з кубиків у тривимірному світі.</p>
+                    <p>
+                        <input type="checkbox" id="completed-3" disabled>
+                        <label for="completed-3">Пройдено</label>
+                    </p>
+                </article>
+            </li>
+            <!-- Картка 4 -->
+            <li>
+                <article class="game-card">
+                    <h3>Portal 2</h3>
+                    <img src="portal2-small.jpg" 
+                         srcset="portal2-small.jpg 400w, portal2-large.jpg 800w" 
+                         sizes="(max-width: 600px) 400px, 800px" 
+                         alt="Обкладинка гри Portal 2" 
+                         loading="lazy"
+                         class="game-cover">
+                    <p><strong>Жанр:</strong> <span class="category">Головоломка</span></p>
+                    <p><strong>Рік випуску:</strong> <time datetime="2011-04-18">2011</time></p>
+                    <p><strong>Час проходження (год):</strong> <data value="10">10</data></p>
+                    <p><strong>Опис:</strong> Гра-головоломка від першої особи, що використовує механіку порталів.</p>
+                    <p>
+                        <input type="checkbox" id="completed-4" checked disabled>
+                        <label for="completed-4">Пройдено</label>
+                    </p>
+                </article>
+            </li>
+            <!-- Картка 5 -->
+            <li>
+                <article class="game-card">
+                    <h3>Half-Life 2</h3>
+                    <img src="hl2-small.jpg" 
+                         srcset="hl2-small.jpg 400w, hl2-large.jpg 800w" 
+                         sizes="(max-width: 600px) 400px, 800px" 
+                         alt="Обкладинка гри Half-Life 2" 
+                         loading="lazy"
+                         class="game-cover">
+                    <p><strong>Жанр:</strong> <span class="category">Шутер</span></p>
+                    <p><strong>Рік випуску:</strong> <time datetime="2004-11-16">2004</time></p>
+                    <p><strong>Час проходження (год):</strong> <data value="15">15</data></p>
+                    <p><strong>Опис:</strong> Легендарний науково-фантастичний шутер від першої особи.</p>
+                    <p>
+                        <input type="checkbox" id="completed-5" checked disabled>
+                        <label for="completed-5">Пройдено</label>
+                    </p>
+                </article>
+            </li>
+            <!-- Картка 6 -->
+            <li>
+                <article class="game-card">
+                    <h3>Stardew Valley</h3>
+                    <img src="stardew-small.jpg" 
+                         srcset="stardew-small.jpg 400w, stardew-large.jpg 800w" 
+                         sizes="(max-width: 600px) 400px, 800px" 
+                         alt="Обкладинка гри Stardew Valley" 
+                         loading="lazy"
+                         class="game-cover">
+                    <p><strong>Жанр:</strong> <span class="category">Симулятор фермера</span></p>
+                    <p><strong>Рік випуску:</strong> <time datetime="2016-02-26">2016</time></p>
+                    <p><strong>Час проходження (год):</strong> <data value="80">80</data></p>
+                    <p><strong>Опис:</strong> Інді-симулятор ферми з елементами рольової гри.</p>
+                    <p>
+                        <input type="checkbox" id="completed-6" disabled>
+                        <label for="completed-6">Пройдено</label>
+                    </p>
+                </article>
+            </li>
+        </ul>
+    </section>
+
+    <aside id="fun-fact">
+        <h2>Цікавий факт</h2>
+        <p>Для коректного підключення моніторів з частотою 120 Гц та 200 Гц критично важливо використовувати відповідні версії кабелів DisplayPort та HDMI, щоб забезпечити максимальну пропускну здатність без втрати якості.</p>
+    </aside>
+</main>
+
+<footer id="contacts">
+    <h2>Контакти</h2>
+    <p>Email: evilgamerx228@gmail.com</p>
+    <p>&copy; 2026 Владислав Чесной. Всі права захищено.</p>
+</footer>
+
+</body>
+</html>
